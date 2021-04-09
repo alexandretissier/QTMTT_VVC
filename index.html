@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <base href="dist/base.html">
+  <title>QTMTT-VVC - Machine Learning based Efficient QT-MTT Partitioning Scheme for VVC Intra Encoders</title>
+  <script type="module" src="https://unpkg.com/img-comparison-slider@latest/dist/component/component.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/img-comparison-slider@latest/dist/component/component.js"></script>
+  <script src="jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="initial.css">
+  <link rel="stylesheet" href="style.css">
+
+  <meta property="og:title" content="Machine Learning based Efficient QT-MTT Partitioning Scheme for VVC Intra Encoders">
+  <meta property="og:description" content="The next-generation Versatile Video Coding (VVC) standard introduces a new Multi-Type Tree (MTT) block partitioning structure that supports Binary-Tree (BT) and Ternary-Tree (TT) splits in both vertical and horizontal directions. This new approach leads to five possible splits at each block depth and thereby improves the coding efficiency of VVC over that of the preceding High Efficiency Video Coding (HEVC) standard, which only supports Quad-Tree (QT) partitioning with a single split per block depth. However, MTT also has brought a considerable impact on encoder computational complexity. In this paper, a two-stage learning-based technique is proposed to tackle the complexity overhead of MTT in VVC intra encoders. In our scheme, the input block is first processed by a Convolutional Neural Network (CNN) to predict its spatial features through a vector of probabilities describing the partition at each 4x4 edge.  Subsequently, a Decision Tree (DT) model leverages this vector of spatial features to predict the most likely splits at each block. Finally, based on this prediction, only the N most likely splits are processed by the Rate-Distortion (RD) process of the encoder. In order to train our CNN and DT models on a wide range of image contents, we also propose a public VVC frame partitioning dataset based on existing image dataset encoded with the VVC reference software encoder.
+Our proposal relying on the top-3 configuration reaches 46.6\% complexity reduction for a negligible bitrate increase of 0.86\%. A top-2 configuration enables a higher complexity reduction of 69.8\% for 2.57\% bitrate loss. These results emphasis a better trade-off between VTM intra coding efficiency and complexity reduction compared to the state-of-the-art solutions">
+	<meta property="og:image" content="https://raw.githubusercontent.com/alexandretissier/QTMTT_VVC/main/fig/dataset_representation.pdf">
+  <meta property="og:url" content="https://raw.githubusercontent.com/alexandretissier/QTMTT_VVC/main/fig/dataset_representation.pdf">
+
+  <meta name="twitter:title" content="Machine Learning based Efficient QT-MTT Partitioning Scheme for VVC Intra Encoders">
+  <meta name="twitter:description" content="The next-generation Versatile Video Coding (VVC) standard introduces a new Multi-Type Tree (MTT) block partitioning structure that supports Binary-Tree (BT) and Ternary-Tree (TT) splits in both vertical and horizontal directions. This new approach leads to five possible splits at each block depth and thereby improves the coding efficiency of VVC over that of the preceding High Efficiency Video Coding (HEVC) standard, which only supports Quad-Tree (QT) partitioning with a single split per block depth. However, MTT also has brought a considerable impact on encoder computational complexity. In this paper, a two-stage learning-based technique is proposed to tackle the complexity overhead of MTT in VVC intra encoders. In our scheme, the input block is first processed by a Convolutional Neural Network (CNN) to predict its spatial features through a vector of probabilities describing the partition at each 4x4 edge.  Subsequently, a Decision Tree (DT) model leverages this vector of spatial features to predict the most likely splits at each block. Finally, based on this prediction, only the N most likely splits are processed by the Rate-Distortion (RD) process of the encoder. In order to train our CNN and DT models on a wide range of image contents, we also propose a public VVC frame partitioning dataset based on existing image dataset encoded with the VVC reference software encoder.
+Our proposal relying on the top-3 configuration reaches 46.6\% complexity reduction for a negligible bitrate increase of 0.86\%. A top-2 configuration enables a higher complexity reduction of 69.8\% for 2.57\% bitrate loss. These results emphasis a better trade-off between VTM intra coding efficiency and complexity reduction compared to the state-of-the-art solutions">
+	<meta name="twitter:image" content="https://raw.githubusercontent.com/alexandretissier/QTMTT_VVC/main/fig/dataset_representation.pdf">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body>
+  <div id="tile">
+    <h1>Machine Learning based Efficient QT-MTT Partitioning Scheme for VVC Intra Encoders</h1>
+    <div id="author_container">
+      <p class="author"><b>Alexandre Tissier</b><br />INSA Rennes<br />IETR VAADER</p>
+      <p class="author"><b>Wassim Hamidouche</b><br />INSA Rennes<br />IETR VAADER</p>
+      <p class="author"><b>Souhaiel Belhadj Dit Mdalsi</b><br />INSA Rennes<br />IETR VAADER</p>
+      <p class="author"><b>Jarno Vanne</b><br />Tampere University<br /></p>
+      <p class="author"><b>Franck Galpin</b><br />InterDigital<br /></p>
+    	<p class="author"><b>Daniel Menard</b><br />INSA Rennes<br />IETR VAADER</p>
+		</div>
+    <hr />
+    <h2 style="padding: 0 10%;">Abstract</h2>
+    <p style="text-align: justify; padding: 0 10%;">
+    	The next-generation Versatile Video Coding (VVC) standard introduces a new Multi-Type Tree (MTT) block partitioning structure that supports Binary-Tree (BT) and Ternary-Tree (TT) splits in both vertical and horizontal directions. This new approach leads to five possible splits at each block depth and thereby improves the coding efficiency of VVC over that of the preceding High Efficiency Video Coding (HEVC) standard, which only supports Quad-Tree (QT) partitioning with a single split per block depth. However, MTT also has brought a considerable impact on encoder computational complexity. In this paper, a two-stage learning-based technique is proposed to tackle the complexity overhead of MTT in VVC intra encoders. In our scheme, the input block is first processed by a Convolutional Neural Network (CNN) to predict its spatial features through a vector of probabilities describing the partition at each 4x4 edge.  Subsequently, a Decision Tree (DT) model leverages this vector of spatial features to predict the most likely splits at each block. Finally, based on this prediction, only the N most likely splits are processed by the Rate-Distortion (RD) process of the encoder. In order to train our CNN and DT models on a wide range of image contents, we also propose a public VVC frame partitioning dataset based on existing image dataset encoded with the VVC reference software encoder. 
+			Our proposal relying on the top-3 configuration reaches 46.6\% complexity reduction for a negligible bitrate increase of 0.86\%. A top-2 configuration enables a higher complexity reduction of 69.8\% for 2.57\% bitrate loss. These results emphasis a better trade-off between VTM intra coding efficiency and complexity reduction compared to the state-of-the-art solutions
+    </p>
+    <hr />
+
+		<h2 style="padding: 0 10%;">Dataset presentation</h2>
+    <p style="text-align: justify; padding: 0 10%;">
+		
+		<figure align="center">
+			<img src="https://raw.githubusercontent.com/alexandretissier/QTMTT_VVC/main/fig/dataset_representation.pdf"
+					 alt="Representation of our dataset.">
+			<figcaption>Fig. 1. Representation of our dataset. Left image is a luminance 64x64 input block. Right image is the optimal partitioning of the block represented by a tree.</figcaption>
+		</figure>
+	
+		<br>
+		<table align="center">
+			<caption>Table I<br>Breakdown of our dataset by resolution.</caption>
+			<tr>
+  			<td>Resolution</td>
+  			<td>240p</td>
+  			<td>480p</td>
+  			<td>720p</td>
+				<td>1080p</td>
+				<td>4K</td>
+				<td>8k</td>
+				<td>Total</td>
+			</tr>
+			<tr>
+				<td>Nb images</td>
+				<td>500</td>
+				<td>500</td>
+				<td>579</td>
+				<td>2557</td>
+				<td>654</td>
+				<td>418</td>
+				<td>5208</td>
+		</table>
+		<br>
+		<br>
+			The lack of public dataset providing encoded blocks with the VVC Test Model (VTM) and their corresponding partitions drives us to construct our training dataset to optimize our proposed models weights. 
+			As our work focuses on All Intra (AI) configuration, temporal relationship between frames is not considered.
+			Therefore, five public image datasets were selected including Div2k [1], 4K images [2], jpeg-ai [3], HDR google [4] and flickr2k [5]. 
+			The resulting dataset presents a high diversity of still image contents. 
+			However, since these datasets include more images in high resolution (Full HD and 4K resolutions), a set of high resolution images downscaled with a bilinear filter are added to the dataset. 
+			This results in a dataset with around 5208 images at different resolutions as detailed in Table I which gives the number of images per resolution.
+			The images of the same resolution are then concatenated to build a pseudo-video sequence. 
+			This latter is encoded with the VTM encoder in AI configuration at different Quantization Parameter (QP) values, QP ∈ {22, 27, 32, 37}. 
+
+			It should be noticed that the VTM encoder includes multiple speed-up techniques for the partitioning process to overcome the complexity brought by the VVC partitioning process [6]. 
+			To achieve a high coding efficiency by testing more partitioning configurations, these speedup techniques have been disabled to build our dataset.
+			Compared to the VTM anchor, disabling these speed-up techniques enhances the coding efficiency with more accurate partitioning configurations.
+			Nevertheless, a higher encoding time is needed to create the ground truth but only one encoding pass is required, so, increasing the encoding time is not critical at this stage. 
+			The VTM in AI configuration relies on the dual tree tool that performs separate partitioning for luminance and chrominance components.
+			The partitioning information of both components is recorded while only the prediction of luminance partitioning is considered in this paper since it takes the most part of the encoding complexity with more than 85\% of the total encoding time [7].
+			The optimal partitions computed by the VTM encoder are saved as a tree.
+			<br>
+			<br>
+			<br>
+			<a href="https://github.com/alexandretissier/QTMTT_VVC">Github page</a> including dataset and source code.
+			<br>
+			<br>
+			<i>References :
+			<br>
+			[1] Eirikur Agustsson and Radu Timofte, “NTIRE 2017 Challenge on Single Image Super-Resolution: Dataset and Study,” in 2017 IEEE Conference on Computer Vision and Pattern Recognition Workshops(CVPRW), Honolulu, HI, USA, July 2017, pp.1122–1131, IEEE.
+			<br>
+			[2] Evgeniu Makov, Dataset image 4k, 2019.
+			<br>
+			[3] Iec Jtc and Itu-T Sg, “Call for evidence on learning-based image coding technologies (JPEG AI),” p.15, 2020.
+			<br>
+			[4] Samuel W. Hasinoff, Dillon Sharlet, Ryan Geiss, Andrew Adams, Jonathan T. Barron, Florian Kainz, Jiawen Chen, and Marc Levoy, “Burst photography for high dynamic range and low-light imaging on mobile cameras,” ACM Transactions on Graphics, vol.35, no.6, pp.1–12, Nov. 2016.
+			<br>
+			[5] Radu Timofte and al., “NTIRE 2017 Challenge on Single Image Super-Resolution: Methods and Results,” p.12.
+			<br>
+			[6] A. Wieckowski, J. Ma, H. Schwarz, D. Marpe, and T. Wiegand, “Fast Partitioning Decision Strategies for The Upcoming Versatile Video Coding (VVC) Standard,” in 2019 IEEE International Conference on Image Processing (ICIP), Sept. 2019, pp.4130–4134.
+			<br>
+			[7] Mario Saldanha, Gustavo Sanchez, Cesar Marcon, and Luciano Agostini, “Complexity Analysis Of VVC Intra Coding,” in 2020 IEEE International Conference on Image Processing (ICIP), Abu Dhabi, United ArabEmirates, Oct. 2020, pp.3119–3123, IEEE.</i>
+		</p>
+
+
+</body>
+
+</html>
